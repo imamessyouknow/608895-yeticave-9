@@ -65,7 +65,7 @@ $objects_names = ['name', 'category', 'price', 'url'];
         <h2 class="promo__title">Нужен стафф для катки?</h2>
         <p class="promo__text">На нашем интернет-аукционе ты найдёшь самое эксклюзивное сноубордическое и горнолыжное снаряжение.</p>
         <ul class="promo__list">
-            <?php foreach($categories as $key => $val): ?>
+            <?php foreach($categories as $val): ?>
             			<li class="promo__item promo__item--boards">
                 			<a class="promo__link" href="pages/all-lots.html"><?=$val; ?></a>
             			</li>
@@ -106,7 +106,7 @@ $objects_names = ['name', 'category', 'price', 'url'];
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
-			<?php foreach ($categories as $key => $val): ?>
+			<?php foreach ($categories as $val): ?>
             			<li class="nav__item">
                 			<a href="pages/all-lots.html"><?=$val; ?></a>
             			</li>
