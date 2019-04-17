@@ -65,15 +65,11 @@ $objects_names = ['name', 'category', 'price', 'url'];
         <h2 class="promo__title">Нужен стафф для катки?</h2>
         <p class="promo__text">На нашем интернет-аукционе ты найдёшь самое эксклюзивное сноубордическое и горнолыжное снаряжение.</p>
         <ul class="promo__list">
-            <?php
-				$ttl_cat = count($categories);
-				$cur_id = 0;
-					while ($cur_id < $ttl_cat): ?>
+            <?php foreach($categories as $key => $val): ?>
             			<li class="promo__item promo__item--boards">
-                			<a class="promo__link" href="pages/all-lots.html"><?=$categories[$cur_id]; ?></a>
+                			<a class="promo__link" href="pages/all-lots.html"><?=$val; ?></a>
             			</li>
-						<?php $cur_id++; ?>
-			<?php endwhile; ?>
+			<?php endforeach; ?>
         </ul>
     </section>
     <section class="lots">
@@ -81,7 +77,7 @@ $objects_names = ['name', 'category', 'price', 'url'];
             <h2>Открытые лоты</h2>
         </div>
         <ul class="lots__list">
-            <?php foreach ($suply as $key => $val): ?>
+            <?php foreach ($suply as $val): ?>
             <li class="lots__item lot">
                 <div class="lot__image">
                     <img src="<?=$val[$objects_names[3]]; ?>" width="350" height="260" alt="">
@@ -100,7 +96,7 @@ $objects_names = ['name', 'category', 'price', 'url'];
                     </div>
                 </div>
             </li>
-		<?php endforeach; ?>
+			<?php endforeach; ?>
         </ul>
     </section>
 </main>
@@ -110,14 +106,11 @@ $objects_names = ['name', 'category', 'price', 'url'];
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
-			<?php
-			$cur_id = 0;
-					while ($cur_id < $ttl_cat): ?>
+			<?php foreach ($categories as $key => $val): ?>
             			<li class="nav__item">
-                			<a href="pages/all-lots.html"><?=$categories[$cur_id]; ?></a>
+                			<a href="pages/all-lots.html"><?=$val; ?></a>
             			</li>
-						<?php $cur_id++; ?>
-			<?php endwhile; ?>
+			<?php endforeach; ?>
         </ul>
     </nav>
     <div class="main-footer__bottom container">
