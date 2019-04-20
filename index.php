@@ -1,7 +1,19 @@
 <?php
 $is_auth = rand(0, 1);
-
 $user_name = 'Владимир Сизанюк'; // укажите здесь ваше имя
+?>
+
+<?php 
+function format_sum($number) {
+	$form_num;
+	$number = ceil($number);
+	if ($number < 1000) {
+		$form_num = $number;
+	} else {
+		$form_num = number_format($number,0,',',' ') . '₽';
+	}
+	return $form_num;
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -88,7 +100,7 @@ $objects_names = ['name', 'category', 'price', 'url'];
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?=$val[$objects_names[2]]; ?><b class="rub">р</b></span>
+                            <span class="lot__cost"><?=format_sum($val[$objects_names[2]]); ?></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
