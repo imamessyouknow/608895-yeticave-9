@@ -11,7 +11,7 @@ symbol_code char(255) not null);
 
 create table rate (
 id int auto_increment primary key,
-r_date timestamp not null,
+create_at timestamp not null,
 suplied_price int not null,
 user_id int not null,
 lot_id int not null,
@@ -25,7 +25,9 @@ email char(255) unique not null,
 name char(255) unique not null,
 password char(255) not null,
 avatar text null,
-contact_inf text null);
+phone varchar(20) unique not null,
+address text null,
+about_me text null);
 
 create table lot (
 id int auto_increment primary key,
