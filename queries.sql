@@ -9,8 +9,8 @@ insert into categories
 
 insert into user 
 (registration_date, email, name, password, phone, address, about_me) values
-(now(),'vasya@mail.ru','Василий', 'пятьпятерок', '79161234567', 'улица ленина дом 69', 'коммунист'),
-(now(),'putya@kremlin.ru','Володя', 'кабаеванорм', '1', 'рядом с метро', 'коммунист-пацифист');
+(now(),'vasya@mail.ru','Василий', 'BA3253876AED6BC22D4A6FF53D8406C6AD864195ED144AB5C87621B6C233B548BAEAE6956DF346EC8C17F5EA10F35EE3CBC514797ED7DDD3145464E2A0BAB413', '79161234567', 'улица ленина дом 69', 'коммунист'),
+(now(),'putya@kremlin.ru','Володя', 'D7A7F32990FF516D127FC69233F5CE7723767AB1C11B6E6D91903A4EA6C0CE293ECF5837FE001ABBD9C651864D4B8EAB7B518DAC4475FA77DD7D3B0914D483B9', '1', 'рядом с метро', 'коммунист-пацифист');
 
 insert into lot 
 (date_create, name, description, img, start_price, rate_step, author_id, category_id) values
