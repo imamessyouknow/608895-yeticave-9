@@ -26,19 +26,27 @@ insert into rate
 (now(), 12000, 3, 3),
 (now(), 8000, 2, 4);
 
+
+-- получить список категорий
 select name from categories;
 
+
+-- получить последние открытые лоты с названием категорий
 select l.name, start_price, date_create, img, current_price, c.name
 from lot l join categories c on l.category_id = c.id
 where date_create >= adddate(now(), interval - 5 day);
 
+-- получить лот по айди с категорией
 select l.name, start_price, date_create, img, current_price, c.name
 from lot l join categories c on l.category_id = c.id
 where l.id = 2;
 
+-- обновить назвние лота по айди
 update lot set name = 'newname'
 where id = 2;
 
+
+-- получить список последних ставок по айди лота
 select l.name, create_at, suplied_price, u.name
 from rate 
 join lot l on rate.lot_id = l.id
