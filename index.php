@@ -4,15 +4,6 @@ require_once('helpers.php');
 require_once('functions-data/data.php');
 require_once('functions-data/svs_functions.php');
 
-date_default_timezone_set($timezone);
-setlocale(LC_ALL, $locale);
-
-//подсчет дат и интервалов
-$curdate = date_create('now');
-$tummdate = date_create('tomorrow');
-$interval = date_diff($curdate, $tummdate);
-$diff_format = date_interval_format($interval, '%H:%I');
-
 //условный формат
 $time_left_class = 'lot__timer timer';
 if (date_interval_format($interval,'%H') < 1) {
